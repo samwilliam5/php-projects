@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+form {
+    box-shadow: 3px 3px 5px hsl(0, 0%, 100%);
+    background-color: hsla(220, 93%, 32%, 0.582);
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    border: 5px solid hsla(220, 93%, 32%, 0.582);
+    border-radius: 5px;
+    margin: auto;
+}
+
+button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: hsl(133, 92%, 31%);
+}
+
+form input {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.searched {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 5px solid hsla(220, 93%, 32%, 0.582);
+    margin: auto;
+    box-shadow: 3px 3px 5px hsl(0, 0%, 100%);
+}
