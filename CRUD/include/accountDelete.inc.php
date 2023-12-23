@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $statement->bindParam(":user_name", $username);
       $statement->bindParam(":password", $password);
 
+
       if (!empty($username) && !empty($password)) {
          $statement->execute();
       }

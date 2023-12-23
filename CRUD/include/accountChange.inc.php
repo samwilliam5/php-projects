@@ -9,9 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       require_once './dbh.inc.php';
       $query = 'update users set user_name = :user_name , password = :password , email = :email where id =2';
       $statement = $connection->prepare($query);
+      $arr = ['array' => 12];
 
+      $hashPassword = password_hash($password, PASSWORD_BCRYPT, $arr);
       $statement->bindParam(":user_name", $username);
-      $statement->bindParam(":password", $password);
+      $statement->bindParam(":password", $hashPassword);
       $statement->bindParam(":email", $email);
 
       if (!empty($username) && !empty($password) && !empty($email)) {
